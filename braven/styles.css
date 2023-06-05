@@ -1,0 +1,58 @@
+
+body {
+    background-color: white;
+}
+
+main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    z-index: -1;   
+}
+
+#p5{
+    position: relative;
+    width: 80vw;
+    height: 100vh;
+    border: 0%;
+    padding: 5px;
+    z-index: -2;
+}
+
+.sp-section {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    max-width: 767px;
+    margin-bottom: 0px;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+h2 {
+    font-family: 'Chivo Mono', monospace;
+    font-weight: 900;
+    font-size: 20pt;
+    color: white;
+    display: inline;
+    padding: 0%;
+    margin: 0%;
+    background-color:rgb(58, 58, 58);
+}
+
+p {
+font-family: 'DotGothic16', sans-serif;
+font-size: 14pt;
+color: white;
+background-color: rgb(58, 58, 58);
+display: inline;
+}
