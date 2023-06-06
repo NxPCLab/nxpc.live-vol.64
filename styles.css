@@ -1,53 +1,229 @@
-* {
-  padding: 0;
+body {
+  background-color: white;
+  /*justify-content: center;*/
   margin: 0;
-  box-sizing: border-box;
+  font-size: 110%;
 }
 
-nav {
-  position: absolute;
-  top: 30px;
-  left: 30px;
+.script-container {
   display: flex;
-  gap: 30px;
-}
-
-h1 {
-  margin: 30px 0;
-  text-align: center;
-}
-
-.hero {
+  width: 100vw;
   height: 100vh;
-  background-color: antiquewhite;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
 }
 
-.page-container {
-  width: 65vw;
+.sp-section {
+  position: relative;
+  top: 0%;
+  left: 0%;
+  max-width: 800px;
+  margin-bottom: 5%;
+  padding-left: 20px;
+  padding-right: 20px;
   margin: 0 auto;
 }
 
-.performers-container {
+.keyvisual-container {
+  position: relative;
+  width: 98vw;
+  height: 100vh;
+  border: 0%;
+  padding: 5px;
+  mix-blend-mode: multiply;
+}
+
+.toptitle {
+  display: inline-block;
+  font-family: "Chivo Mono", monospace;
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: white;
+  background-color: blue;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.eventname {
+  font-family: "dotgothic16", sans-serif;
+  font-weight: 100;
+  color: blue;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 16vw;
+}
+
+#pox {
+  position: absolute;
+  top: 15vh;
+  left: 5%;
+}
+
+#nx {
+  position: absolute;
+  bottom: 15vh;
+  left: 5%;
+}
+
+.topinfo {
+  display: inline-block;
+  font-family: "Chivo Mono", monospace;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: blue;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  right: 5%;
+  bottom: 30%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  display: inline-block;
+  font-family: "Chivo Mono", monospace;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+p,
+span {
+  background-color: white;
+  color: black;
+  display: block;
+}
+
+h1 {
+  background-color: blue;
+  color: white;
+  font-size: 2rem;
+}
+
+h2 {
+  background-color: blue;
+  color: white;
+  font-size: 1.5rem;
+}
+
+h3 {
+  background-color: black;
+  color: white;
+  font-size: 1.25rem;
+}
+
+p {
+  font-size: 1rem;
+  font-family: "Chivo Mono", monospace;
+}
+
+#issue-text {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 14pt;
+  font-weight: 400;
+  background-color: white;
+  display: inline;
+  padding-left: 0px;
+  padding-right: 40px;
+  z-index: 1;
+  position: absolute;
+  top: 3%;
+  right: 0%;
+}
+
+.performer-container {
   display: flex;
+  flex-wrap: wrap;
   row-gap: 10px;
-  column-gap: 20px;
+  column-gap: 10px;
+  flex-basis: content;
+  justify-content: space-between;
 }
 
-.performer-image-container {
-  width: 100%;
+.performer-frame {
+  max-width: 350px;
 }
 
-img {
-  width: 100%;
+.performer-detail {
+  display: flex;
+  flex-direction: row;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.performer-frame h2,
+p {
+  margin-top: 0%;
+  margin-bottom: 10px;
+}
+
+.performer-frame h2 {
+  background-color: blue;
+  color: white;
+}
+
+.performer-frame img {
+  width: 40%;
+  height: 40%;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  margin-left: 5%;
+  right: 5%;
+}
+
+a {
+  font-family: "Chivo Mono", monospace;
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  text-align: left;
+  display: flex;
+  flex-basis: content;
+  flex-wrap: wrap;
+  float: inline-end;
+  overflow-x: auto;
+  display: inline;
+  background-color: blue;
+}
+
+a:hover {
+  background-color: yellow;
+  color: blue;
+}
+
+.map {
+  width: 95%;
+  max-width: 600px;
+  height: 40vh;
+}
+
+.nav-links {
+  position: fixed;
+  z-index: 1;
+  top: calc(100vh - 10%);
+  left: 0;
+  right: 0%;
+}
+
+.nav-elem {
+  top: 0;
+  left: 0;
 }
 
 footer {
   height: 100px;
-  background-color: gray;
-}
-
-@media screen and (max-width: 480px) {
-  .page-container {
-    width: 90vw;
-  }
+  width: 100%;
+  background-color: blue;
+  z-index: 3;
 }

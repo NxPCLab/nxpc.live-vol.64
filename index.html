@@ -1,91 +1,181 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <title>NxPC x Proof of X</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
 
-  <body>
-    <nav>
-      <a href="#">hoge</a>
-      <a href="#">fuga</a>
-      <a href="#">piyo</a>
+<head>
+    <title>NxPC x Proof of X</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- p5js -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chivo+Mono&family=DotGothic16&family=Nanum+Myeongjo&display=swap"
+      rel="stylesheet"
+    />
+</head>
+
+<body>
+    <div class="script-container">
+        <main>
+            <script src="js/sketch.js">
+            </script>
+        </main>
+        <main></main>
+    </div>
+
+    <div class="keyvisual-container">
+        <span class="toptitle">
+            Vol.64: Proof of X x NxPC
+            <br>
+            After party for Proof of X!!
+        </span>
+        <span class="eventname" id="pox">
+            Proof of _
+        </span>
+        <span class="eventname" id="nx">
+            N_PC
+        </span>
+        <span class="topinfo">
+            6/25(sun) open 18:00~
+            <br>
+            Venue: SALOON
+            <br>
+            ¥1500 + 1drink
+        </span>
+    </div>
+
+    <nav class="nav-links">
+        <ul>
+            <a class="nav-elem" href="#info">Info</a>  
+            <a class="nav-elem" href="#performer">Performer</a>
+            <a class="nav-elem" href="#about">About</a>
+            <a class="nav-elem" href="#top" id="goto-top">Top</a>
+            <script>
+                const toTop = document.querySelector("#goto-top");
+                toTop.addEventListener("click", () => {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+          </a>
+        </ul>
     </nav>
-    <div class="hero">
-      <!-- jsとかgifとか -->
+
+    <div id="info" class="sp-section">
+        <h1>Info</h1>
+        <p>
+            開催日時: 6/25 18:00~ <br>
+            料金: ¥1500 + 1drink ¥500 (Proof of Xのチケットを提示していただくと1drink無料)
+        </p>
+        <h2>Access</h2>
+        <p>
+            会場：SALOON 東京都渋谷区恵比寿西1-34-17　Za HOUSEビルB3F
+        </p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1688.18938920381!2d139.70027516382694!3d35.64717392493946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bd687c7e66d%3A0x4d0a1e9b34f2aa50!2sSALOON!5e0!3m2!1sja!2sjp!4v1686020827585!5m2!1sja!2sjp" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
-    <div class="page-container">
-      <div class="information-container">
-        <div>
-          <h1>NxPCとは</h1>
-          <p>
+
+    <div id="performer" class="sp-section">
+        <h1>Performer</h1>
+        <div class="performer-container">
+            <div class="performer-frame">
+                <h2>Ai.step</h2>
+                <div class="performer-detail">
+                    <img src="data/artist-img/Ai.step_profile.jpg" alt="" />
+                    <p>人間と機械学習に基づくAIが共に演奏及び映像生成を行ない、パフォーマンスを通して人間とAIの間の相互補完によって生まれる可能性を探究する。</p>
+                </div>
+            </div>
+            <div class="performer-frame">
+                <h2>Yugo Minomo</h2>
+                <div class="performer-detail">
+                    <img src="data/artist-img/minomo_profile.jpg" alt="" />
+                    <p>放送技術者。大学院を出て一度は就職したものの、リスキリングの衝動に駆られて40歳手前にしてIAMASに入学。NxPC.Labの活動に出会ってオーディオビジュアルの活動を開始。2児の父。</p>
+                </div>
+            </div>
+            <div class="performer-frame">
+                <h2>KxS</h2>
+                <div class="performer-detail">
+                    <img src="data/artist-img/KxS.png" alt="" />
+                    <p>演奏家・木村佳とビジュアルデザイナー・柴田一秀によるパフォーマンスユニット。
+                        視覚表現と聴覚表現の相互補完的な在り方を追求したパフォーマンスを行い、演奏体験の拡張を目指す。</p>
+                </div>
+            </div>
+            <div class="performer-frame">
+                <h2>fussy</h2>
+                <div class="performer-detail">
+                    <img src="data/artist-img/fussy.jpg" alt="" />
+                    <p>XRを用いた表現システムである「Avatar Jockey」を開発し、様々な現場で使用実験しながら複合現実空間におけるオーディオビジュアル表現の可能性を研究している。</p>
+                </div>
+            </div>
+            <div class="performer-frame">
+                <h2>electric catfish</h2>
+                <div class="performer-detail">
+                    <!--
+                        <img src="data/artist-img" alt="" />
+                    -->
+                    <p>BravenとSantaが電磁波を愛でます。</p>
+                </div>
+            </div>
+            <div class="performer-frame">
+                <h2>hitsujikai</h2>
+                <div class="performer-detail">
+                     <!--
+                        <img src="data/artist-img" alt="" />
+                    -->
+                    <p>地球を征服します。ひつじかい。</p>
+                </div>
+            </div>
+            <div class="performer-frame">
+                <h2>税金操作</h2>
+                <div class="performer-detail">
+                    <!--
+                        <img src="data/artist-img" alt="" />
+                    -->
+                    <p>大雨の中、高速道路で時速170kmの車に轢かれた配達員を発見しました。</p>
+                </div>
+            </div>
+            <div class="performer-frame">
+                <h2>zumisio & Asuka Morita</h2>
+                <div class="performer-detail">
+                    <!--
+                        <img src="data/artist-img" alt="" />
+                    -->
+                    <p></p>
+                </div>
+            </div>
+            <div class="performer-frame">
+                <h2>マクト</h2>
+                <div class="performer-detail">
+                    <!--
+                        <img src="data/artist-img" alt="" />
+                    -->
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="sp-section">
+        <h1>About</h1>
+        <!-- Aboutセクションのコンテンツをここに追加 -->
+        <p class="para">
             NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。
+            <br><br>
             現代のメディア体験において必要とされる対話性、参加性をデバイス、インタフェース、ネットワークといったメディアテクノロジーを駆使することで、音楽体験を拡張し、音楽空間におけるコミュニケーションを次のステージへ導くための研究開発、イベントを実施しています。実験の場としてのイベントNxPC.Liveを中心に、レクチャーやワークショップ、ネットラジオなどの活動を行っています。
-          </p>
-        </div>
-        <div>
-          <h1>Performer</h1>
-          <div class="performers-container">
-            <div class="performer-container">
-              <div class="performer-image-container">
-                <img src="data/artist-img/Ai.step_profile.jpg" alt="" />
-              </div>
-              <h2>Braven</h2>
-              <p>ブレブレブレイブン</p>
-            </div>
-            <div class="performer-container">
-              <div class="performer-image-container">
-                <img src="data/artist-img/Ai.step_profile.jpg" alt="" />
-              </div>
-              <h2>Braven</h2>
-              <p>ブレブレブレイブン</p>
-            </div>
-            <div class="performer-container">
-              <div class="performer-image-container">
-                <img src="data/artist-img/Ai.step_profile.jpg" alt="" />
-              </div>
-              <h2>Braven</h2>
-              <p>ブレブレブレイブン</p>
-            </div>
-            <div class="performer-container">
-              <div class="performer-image-container">
-                <img src="data/artist-img/Ai.step_profile.jpg" alt="" />
-              </div>
-              <h2>Braven</h2>
-              <p>ブレブレブレイブン</p>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h1>タイムテーブル</h1>
-          <table>
-            <tr>
-              <th>何時に</th>
-              <th>だれ</th>
-            </tr>
-            <tr>
-              <td>12:00</td>
-              <td>Centro comercial Moctezuma</td>
-            </tr>
-            <tr>
-              <td>13:00</td>
-              <td>Francisco Chang</td>
-            </tr>
-          </table>
-        </div>
-        <div>
-          <h1>アクセス</h1>
-          <h2>THE FACE DAIKANYAMA</h2>
-          <p>
-            東京都渋谷区猿楽町28-13 ROOB-1 B2F Google Map
-            東急東横線「代官山」駅徒歩3分
-          </p>
-        </div>
-      </div>
+        </p>
     </div>
-    <footer>NxPC.Lab</footer>
-  </body>
+    <div class="end" style="
+        position: relative; 
+        height: 200px;
+        width: 100%;
+    ">
+    </div>
+</body>
+<footer>NxPC.Lab</footer>
+
 </html>
