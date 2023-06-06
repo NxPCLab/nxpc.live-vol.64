@@ -1,8 +1,10 @@
+
+
 body {
   background-color: white;
   /*justify-content: center;*/
   margin: 0;
-  
+  font-size: 110%;
 }
 
 .script-container {
@@ -28,14 +30,56 @@ body {
     margin: 0 auto;
 }
 
-
-#p5 {
+.keyvisual-container {
   position: relative;
-  width: 80vw;
+  width: 98vw;
   height: 100vh;
   border: 0%;
   padding: 5px;
-  z-index: -2;
+}
+
+.toptitle{
+    display: inline-block;
+    font-family: "Chivo Mono", monospace;
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: white;
+    background-color: blue;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.eventname{
+    font-family: "dotgothic16", sans-serif;
+    font-weight: 100;
+    color: blue;
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 16vw;
+}
+
+#pox{
+    position: absolute;
+    top: 15vh;
+    left: 5%;
+}
+
+#nx{
+    position: absolute;
+    bottom: 15vh;
+    left: 5%;
+}
+
+.topinfo{
+    display: inline-block;
+    font-family: "Chivo Mono", monospace;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: blue;
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    right: 5%;
+    bottom: 30%;
 }
 
 h1,h2,h3,h4 {
@@ -58,7 +102,7 @@ h1 {
 }
 
 h2 {
-    background-color: black;
+    background-color: blue;
     color: white;
     font-size: 1.5rem;
 }
@@ -114,7 +158,7 @@ p {
 }
 
 .performer-frame h2{
-    background-color: black;
+    background-color: blue;
     color: white;
 }
 
@@ -139,7 +183,7 @@ a {
   font-family: "Chivo Mono", monospace;
   text-decoration: none;
   color: white;
-  font-size: 16pt;
+  font-size: 1.25rem;
   text-align: left;
   display: flex;
   flex-basis: content;
@@ -148,6 +192,11 @@ a {
   overflow-x: auto;
   display: inline;
   background-color: blue;
+}
+
+a:hover{
+    background-color: yellow;
+    color: blue;
 }
 
 .map {
