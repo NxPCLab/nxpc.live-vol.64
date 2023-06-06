@@ -58,20 +58,20 @@ h1 {
 }
 
 h2 {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     font-size: 1.5rem;
 }
 
 h3 {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     font-size: 1.25rem;
 }
 
 p {
     font-size: 1rem;
-    font-family: "DotGothic16", sans-serif;
+    font-family: "Chivo Mono", monospace;
 }
 
 #issue-text {
@@ -111,6 +111,11 @@ p {
 .performer-frame h2, p{
     margin-top: 0%;
     margin-bottom: 10px;
+}
+
+.performer-frame h2{
+    background-color: black;
+    color: white;
 }
 
 .performer-frame img{
