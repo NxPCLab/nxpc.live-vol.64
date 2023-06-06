@@ -39,8 +39,6 @@ body {
 }
 
 h1,h2,h3,h4 {
-    background-color: blue;
-    color: white;
     display: inline-block;
     font-family: "Chivo Mono", monospace;
     font-weight: 900;
@@ -54,15 +52,21 @@ p,span {
 }
 
 h1 {
+    background-color: blue;
+    color: white;
     font-size: 2rem;
 }
 
 h2 {
+    background-color: white;
+    color: black;
     font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+    background-color: white;
+    color: black;
+    font-size: 1.25rem;
 }
 
 p {
