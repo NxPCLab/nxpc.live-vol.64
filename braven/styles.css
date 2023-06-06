@@ -1,58 +1,170 @@
-
 body {
-    background-color: white;
+  background-color: white;
+  /*justify-content: center;*/
+  align-items: center;
+  display: flex;
+  flex-flow: column;
 }
 
-main {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0%;
-    left: 0%;
-    justify-content: center;
-    align-items: center;
-}
-
-canvas {
-    z-index: -1;   
-}
-
-#p5{
-    position: relative;
-    width: 80vw;
-    height: 100vh;
-    border: 0%;
-    padding: 5px;
-    z-index: -2;
+.script-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  justify-content: center;
+  align-items: center;
 }
 
 .sp-section {
     position: relative;
     top: 0%;
     left: 0%;
-    max-width: 767px;
-    margin-bottom: 0px;
-    padding: 20px;
+    max-width: 800px;
+    margin-bottom: 5%;
     padding-left: 20px;
     padding-right: 20px;
-  }
+}
+
+canvas {
+  z-index: -1;
+}
+
+#p5 {
+  position: relative;
+  width: 80vw;
+  height: 100vh;
+  border: 0%;
+  padding: 5px;
+  z-index: -2;
+}
+
+h1,h2,h3,h4 {
+    background-color: lightgray;
+    color: black;
+    display: inline-block;
+    font-family: "Chivo Mono", monospace;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+p,span {
+    background-color: lightgray;
+    color: black;
+    display: block;
+}
+
+h1 {
+    font-size: 2rem;
+}
 
 h2 {
-    font-family: 'Chivo Mono', monospace;
-    font-weight: 900;
-    font-size: 20pt;
-    color: white;
-    display: inline;
-    padding: 0%;
-    margin: 0%;
-    background-color:rgb(58, 58, 58);
+    font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 p {
-font-family: 'DotGothic16', sans-serif;
-font-size: 14pt;
-color: white;
-background-color: rgb(58, 58, 58);
-display: inline;
+    font-size: 1rem;
+    font-family: "DotGothic16", sans-serif;
+}
+
+#issue-text {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 14pt;
+  font-weight: 400;
+  background-color: white;
+  display: inline;
+  padding-left: 0px;
+  padding-right: 40px;
+  z-index: 1;
+  position: absolute;
+  top: 3%;
+  right: 0%;
+}
+
+.performer-container {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+  flex-basis: content;
+  justify-content:space-between;
+}
+
+.performer-frame {
+    max-width: 350px;
+}
+
+.performer-detail {
+    display: flex;
+    flex-direction: row;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.performer-frame h2, p{
+    margin-top: 0%;
+    margin-bottom: 10px;
+}
+
+.performer-frame img{
+    width: 40%;
+    height: 40%;
+    margin-bottom: 10px;
+}
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: absolute;
+  margin-left: 5%;
+  right: 5%;
+}
+
+a {
+  font-family: "Chivo Mono", monospace;
+  text-decoration: none;
+  color: white;
+  font-size: 16pt;
+  text-align: left;
+  display: flex;
+  flex-basis: content;
+  flex-wrap: wrap;
+  float: inline-end;
+  overflow-x: auto;
+  display: inline;
+  background-color: darkslategray;
+}
+
+.map {
+    width: 95%;
+    max-width: 600px;
+    height: 40vh;
+}
+
+.nav-links {
+  position: fixed;
+  z-index: 1;
+  top: calc(100vh - 10%);
+  left: 0;
+  right: 0%;
+}
+
+.nav-elem {
+  top: 0;
+  left: 0;
+}
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: gray;
+    z-index: 0;
 }
