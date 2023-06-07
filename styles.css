@@ -1,8 +1,11 @@
+html{
+  overflow-x: hidden;
+}
 body {
   background-color: white;
   /*justify-content: center;*/
   margin: 0;
-  font-size: 110%;
+  font-size: 100%;
 }
 
 .script-container {
@@ -41,12 +44,12 @@ body {
   display: inline-block;
   font-family: "Chivo Mono", monospace;
   font-weight: 900;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: white;
   background-color: blue;
   position: absolute;
   top: 5%;
-  left: 5%;
+  left: 0%;
 }
 
 .eventname {
@@ -121,6 +124,16 @@ p {
   font-family: "Chivo Mono", monospace;
 }
 
+.external-link {
+  display: inline-block;
+  background-color: yellow;
+  color: blue;
+}
+.external-link:hover {
+  background-color: blue;
+  color: white;
+}
+
 #issue-text {
   font-family: "Nanum Myeongjo", serif;
   font-size: 14pt;
@@ -154,7 +167,7 @@ p {
   flex-direction: row;
 }
 
-.performer-detail p {
+.performer-detail p{
   position: absolute;
   text-align: right;
   bottom: 0;
@@ -184,11 +197,6 @@ a {
   color: white;
   font-size: 1.25rem;
   text-align: left;
-  display: flex;
-  flex-basis: content;
-  flex-wrap: wrap;
-  float: inline-end;
-  overflow-x: auto;
   display: inline;
   background-color: blue;
 }
