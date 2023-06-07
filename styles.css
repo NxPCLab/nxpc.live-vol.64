@@ -1,17 +1,21 @@
-
+html {
+  overflow-x: hidden;
+}
 
 body {
   background-color: white;
   /*justify-content: center;*/
-  margin: 0;
+  width: 100%;
   font-size: 110%;
 }
 
 .script-container {
   display: flex;
-  width: 100vw;
+  width: 95vw;
   height: 100vh;
   position: fixed;
+  margin: 0%;
+  padding: 5px;
   top: 0%;
   left: 0%;
   justify-content: center;
@@ -32,22 +36,24 @@ body {
 
 .keyvisual-container {
   position: relative;
-  width: 98vw;
+  width: 95vw;
   height: 100vh;
   border: 0%;
   padding: 5px;
+  mix-blend-mode: multiply;
+  z-index: 0;
 }
 
-.toptitle{
-    display: inline-block;
-    font-family: "Chivo Mono", monospace;
-    font-weight: 900;
-    font-size: 1.25rem;
-    color: white;
-    background-color: blue;
-    position: absolute;
-    top: 5%;
-    left: 5%;
+.toptitle {
+  display: inline-block;
+  font-family: "Chivo Mono", monospace;
+  font-weight: 900;
+  font-size: 1rem;
+  color: white;
+  background-color: blue;
+  position: absolute;
+  top: 5%;
+  left: 5%;
 }
 
 .eventname{
@@ -95,6 +101,16 @@ p,span {
     display: block;
 }
 
+.external-link {
+  display: inline-block;
+  background-color: yellow;
+  color: blue;
+}
+.external-link:hover {
+  background-color: blue;
+  color: white;
+}
+
 h1 {
     background-color: blue;
     color: white;
@@ -116,6 +132,10 @@ h3 {
 p {
     font-size: 1rem;
     font-family: "Chivo Mono", monospace;
+}
+
+a {
+  text-decoration: none;
 }
 
 #issue-text {
@@ -179,24 +199,20 @@ ul {
   right: 5%;
 }
 
-a {
+.nav-elem {
   font-family: "Chivo Mono", monospace;
-  text-decoration: none;
-  color: white;
+  color: blue;
   font-size: 1.25rem;
   text-align: left;
-  display: flex;
-  flex-basis: content;
-  flex-wrap: wrap;
-  float: inline-end;
+  /*float: inline-end;*/
   overflow-x: auto;
   display: inline;
-  background-color: blue;
+  background-color: yellow;
 }
 
-a:hover{
-    background-color: yellow;
-    color: blue;
+.nav-elem:hover {
+  background-color: blue;
+  color: white;
 }
 
 .map {
@@ -208,9 +224,13 @@ a:hover{
 .nav-links {
   position: fixed;
   z-index: 1;
-  top: calc(100vh - 10%);
+  bottom: 15vh;
   left: 0;
   right: 0%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  mix-blend-mode: multiply;
 }
 
 .nav-elem {
@@ -218,9 +238,32 @@ a:hover{
   left: 0;
 }
 
+.end {
+  position: relative;
+  height: 200px;
+  width: 0%;
+}
+
 footer {
     height: 100px;
     width: 100%;
     background-color: blue;
     z-index: 3;
+}
+
+@media screen and (max-width: 800px) {
+  .nav-links {
+    position: fixed;
+    z-index: 1;
+    bottom: 18vh;
+    left: 0;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    mix-blend-mode: multiply;
+  }
+  html {
+    overflow-x: hidden;
+  }
 }
