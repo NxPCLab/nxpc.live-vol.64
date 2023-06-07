@@ -172,16 +172,6 @@ p {
   margin-bottom: 10px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  position: absolute;
-  margin-left: 5%;
-  right: 5%;
-}
-
 a {
   font-family: "Chivo Mono", monospace;
   text-decoration: none;
@@ -212,8 +202,9 @@ a:hover {
   position: fixed;
   z-index: 1;
   top: calc(100vh - 10%);
-  left: 0;
-  right: 0%;
+  right: 5%;
+  display: flex;
+  gap: 5px;
 }
 
 .nav-elem {
