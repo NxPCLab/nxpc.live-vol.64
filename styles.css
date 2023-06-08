@@ -267,6 +267,15 @@ footer {
   position: relative;
 }
 
+.footer-credit {
+  position: absolute;
+  text-align: right;
+  top: 60vh;
+  right: 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
 .logo-container {
   position: absolute;
   bottom: 20vh;
@@ -330,5 +339,14 @@ footer {
 
   .logo-container img {
     height: 30px;
+  }
+
+  .footer-credit {
+    position: absolute;
+    text-align: left;
+    top: 60vh;
+    left: 5vw;
+    display: flex;
+    flex-direction: column;
   }
 }
