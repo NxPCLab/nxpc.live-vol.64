@@ -58,18 +58,23 @@ body {
   color: blue;
   background-color: rgba(255, 255, 255, 0);
   font-size: 16vw;
+  line-height: 16vw;
+  position: absolute;
+  top: 15vh;
 }
 
 #pox {
-  position: absolute;
-  top: 15vh;
+  text-align: right;
   left: 5%;
 }
 
 #nx {
-  position: absolute;
-  bottom: 15vh;
-  left: 5%;
+  right: 5%;
+}
+
+.lab {
+  font-size: 5vw;
+  color: blue;
 }
 
 .topinfo {
@@ -98,7 +103,6 @@ p,
 span {
   background-color: white;
   color: black;
-  display: block;
 }
 
 h1 {
@@ -233,4 +237,27 @@ footer {
   mix-blend-mode: multiply;
   background-color: blue;
   z-index: 3;
+}
+
+@media screen and (max-width: 480px) {
+  .eventname {
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 30vw;
+    line-height: 30vw;
+    position: absolute;
+  }
+
+  #pox {
+    text-align: right;
+    right: 5vw;
+  }
+
+  #nx {
+    top: 50vh;
+    left: 5vw;
+  }
+
+  .lab {
+    font-size: 20vw;
+  }
 }
