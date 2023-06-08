@@ -53,9 +53,13 @@ body {
 }
 
 .keyvisual-performer {
-  position: absolute;
+  position: fixed;
   bottom: 10vh;
   left: 5vw;
+}
+
+.sm-footer-performer {
+  display: none;
 }
 
 .keyvisual-performer p {
@@ -73,6 +77,9 @@ body {
   position: fixed;
   top: 5%;
   left: 0%;
+  padding-left: 5vw;
+  padding-right: 10px;
+  z-index: 10;
 }
 
 .eventname {
@@ -244,7 +251,7 @@ a:hover {
   bottom: 10vh;
   right: 5vw;
   display: flex;
-  gap: 5px;
+  gap: 1rem;
 }
 
 .nav-elem {
@@ -254,10 +261,23 @@ a:hover {
 
 footer {
   height: 100vh;
-  width: 100%;
-  mix-blend-mode: multiply;
-  background-color: blue;
-  z-index: 3;
+  width: 100vw;
+  background-color: yellow;
+  mix-blend-mode: exclusion;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  bottom: 20vh;
+  right: 5vw;
+  display: flex;
+  gap: 30px;
+}
+
+.logo-container img {
+  display: inline-block;
+  height: 60px;
 }
 
 @media screen and (max-width: 480px) {
@@ -282,6 +302,10 @@ footer {
     font-size: 20vw;
   }
 
+  .toptitle {
+    position: absolute;
+  }
+
   .topinfo {
     font-size: 1rem;
     top: 60vh;
@@ -289,5 +313,22 @@ footer {
 
   .keyvisual-performer {
     display: none;
+  }
+
+  .sm-footer-performer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    margin: 10px;
+  }
+
+  .logo-container {
+    gap: 10px;
+    top: 80vh;
+    left: 5vw;
+  }
+
+  .logo-container img {
+    height: 30px;
   }
 }
