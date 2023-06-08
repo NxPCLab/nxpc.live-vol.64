@@ -1,4 +1,4 @@
-html{
+html {
   overflow-x: hidden;
 }
 body {
@@ -120,6 +120,7 @@ h3 {
 }
 
 p {
+  display: inline-block;
   font-size: 1rem;
   font-family: "Chivo Mono", monospace;
 }
@@ -167,7 +168,7 @@ p {
   flex-direction: row;
 }
 
-.performer-detail p{
+.performer-detail p {
   position: absolute;
   text-align: right;
   bottom: 0;
@@ -227,8 +228,9 @@ a:hover {
 }
 
 footer {
-  height: 100px;
+  height: 100vh;
   width: 100%;
+  mix-blend-mode: multiply;
   background-color: blue;
   z-index: 3;
 }
