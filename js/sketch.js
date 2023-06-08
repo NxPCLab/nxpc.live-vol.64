@@ -18,7 +18,6 @@ let state = 0;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   setScalar();
-  background(200);
   noFill();
   // bezier(x1, y1, x2, y2, x3, y3, x4, y4);
   // bezier(x4, y1-30, x4, y1-30, x1, y4+30, x1, y4+30);
@@ -52,10 +51,10 @@ const interval = 10000;
 let nextTime = interval;
 
 function draw() {
-  background(255);
+  clear();
   window.onresize = () => setScalar();
   looper = floor(millis() / interval) % variation1.length; //（ページが読み込まれてからのmillis秒）を、単位時間で割る。
-  fill(0, 0, 255);
+  fill(0, 0, 0);
   push();
   render(variation1[looper]());
   pop();

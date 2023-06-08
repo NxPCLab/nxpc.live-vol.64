@@ -29,6 +29,19 @@ body {
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+  z-index: 100;
+}
+
+.keyvisual-filter {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: blue;
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
 .keyvisual-container {
@@ -37,7 +50,17 @@ body {
   height: 100vh;
   border: 0%;
   padding: 5px;
-  mix-blend-mode: multiply;
+}
+
+.keyvisual-performer {
+  position: absolute;
+  bottom: 10vh;
+  left: 5vw;
+}
+
+.keyvisual-performer p {
+  display: block;
+  background: none;
 }
 
 .toptitle {
@@ -46,8 +69,8 @@ body {
   font-weight: 900;
   font-size: 1rem;
   color: white;
-  background-color: blue;
-  position: absolute;
+  background-color: black;
+  position: fixed;
   top: 5%;
   left: 0%;
 }
@@ -55,26 +78,28 @@ body {
 .eventname {
   font-family: "dotgothic16", sans-serif;
   font-weight: 100;
-  color: blue;
-  background-color: rgba(255, 255, 255, 0);
+  color: white;
   font-size: 16vw;
   line-height: 16vw;
   position: absolute;
   top: 15vh;
+  background: none;
+  mix-blend-mode: difference;
 }
 
 #pox {
   text-align: right;
-  left: 5%;
+  left: 5vw;
 }
 
 #nx {
-  right: 5%;
+  right: 5vw;
 }
 
-.lab {
-  font-size: 5vw;
-  color: blue;
+.small {
+  font-size: 0.6em;
+  color: white;
+  background: none;
 }
 
 .topinfo {
@@ -82,11 +107,12 @@ body {
   font-family: "Chivo Mono", monospace;
   font-weight: 900;
   font-size: 1.5rem;
-  color: blue;
-  background-color: rgba(255, 255, 255, 0);
+  color: white;
   position: absolute;
-  right: 5%;
-  bottom: 30%;
+  text-align: right;
+  right: 5vw;
+  top: 15vh;
+  mix-blend-mode: difference;
 }
 
 h1,
@@ -97,12 +123,6 @@ h4 {
   font-family: "Chivo Mono", monospace;
   font-weight: 900;
   margin-bottom: 1rem;
-}
-
-p,
-span {
-  background-color: white;
-  color: black;
 }
 
 h1 {
@@ -127,6 +147,7 @@ p {
   display: inline-block;
   font-size: 1rem;
   font-family: "Chivo Mono", monospace;
+  background-color: white;
 }
 
 .external-link {
@@ -219,9 +240,9 @@ a:hover {
 
 .nav-links {
   position: fixed;
-  z-index: 1;
-  top: calc(100vh - 10%);
-  right: 5%;
+  z-index: 999;
+  bottom: 10vh;
+  right: 5vw;
   display: flex;
   gap: 5px;
 }
@@ -259,5 +280,14 @@ footer {
 
   .lab {
     font-size: 20vw;
+  }
+
+  .topinfo {
+    font-size: 1rem;
+    top: 60vh;
+  }
+
+  .keyvisual-performer {
+    display: none;
   }
 }
