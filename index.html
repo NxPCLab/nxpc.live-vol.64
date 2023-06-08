@@ -7,6 +7,11 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
     <script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- syntax highlight -->
+    <link href="prism.css" rel="stylesheet" type="text/css">
+    <script src="js/prism.js"></script>
+    <!-- アイコン -->
+	<link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet">
 
     <!-- p5js -->
     <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
@@ -34,10 +39,10 @@
             <br>
             After party for Proof of X!!
         </span>
-        <span class="eventname" id="pox">
+        <span class="eventname pox">
             Proof of _
         </span>
-        <span class="eventname" id="nx">
+        <span class="eventname nx">
             N_PC.Lab
         </span>
         <span class="topinfo">
@@ -172,5 +177,52 @@
     </div>
     <div class="end"></div>
 </body>
+<footer>
+    <div class="footer-container">
+        <div class="institute-info">
+            <img src="data/logo/proofofx2_logo_ol_230506.png" class="logo-img">
+            <p>
+                Proof of Xの公式website: <span class="footer-link"><a href="https://pox.exhibit.website/">pox.exhibit.website</a></span>
+            </p>
+            <div>
+                <p>SNS:</p><a href="https://twitter.com/proofofx_"><i class="fab fa-twitter-square"></i></a>
+            </div>
+        </div>
+        <div class="institute-info">
+            <img src="data/logo/logo.png" class="logo-img">
+            <div>
+                <p>SNS:</p>
+                <a href="https://twitter.com/nxpclab?s=20"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.instagram.com/iamas.nxpc.lab/"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://www.facebook.com/nxpclab/"><i class="fab fa-facebook-square"></i></a>
+            </div>
+        </div>
+    </div> 
+    <div class="code-input">
+        <h2>submit your code here!</h2>
+        <input>
+        <button>submit</button>
+    </div>   
+    <div class="code-exmaple">
+        <h2>Example code:</h2>
+        <pre>
+            <code class="language-js">
+                (() => {
+                    for (let i = 0; i <= steps; i+=0.1) {
+                      let t = i / steps;
+                      let x = bezierPoint(x1, x1, x4, x4, t);
+                      let y = bezierPoint(y1, y1, y4, y4, t);
+                      let length = cos(state+i/steps)*circleScale
+                      rect(x, y, circleScale, length);
+                      x = bezierPoint(x4, x4, x1, x1, t);
+                      y = bezierPoint(y1, y1, y4, y4, t);
+                      length = sin(state+i/steps)*circleScale
+                      rect(x - length, y, length, circleScale);
+                    }
+                  })
+            </code>
+        </pre>
+    </div>
+</footer>
 
 </html>

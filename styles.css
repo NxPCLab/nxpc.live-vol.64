@@ -39,7 +39,6 @@ body {
   width: 95vw;
   height: 100vh;
   border: 0%;
-  padding: 5px;
   mix-blend-mode: multiply;
   z-index: 0;
 }
@@ -53,15 +52,27 @@ body {
   background-color: blue;
   position: absolute;
   top: 5%;
+  left: 0%;
+}
+
+.eventname {
+  font-family: "dotgothic16", sans-serif;
+  font-weight: 100;
+  color: blue;
+  background-color: rgba(255, 255, 255, 0);
+  font-size: 16vw;
+}
+
+.pox {
+  position: absolute;
+  top: 15vh;
   left: 5%;
 }
 
-.eventname{
-    font-family: "dotgothic16", sans-serif;
-    font-weight: 100;
-    color: blue;
-    background-color: rgba(255, 255, 255, 0);
-    font-size: 16vw;
+.nx {
+  position: absolute;
+  bottom: 15vh;
+  left: 5%;
 }
 
 #pox{
@@ -223,10 +234,9 @@ ul {
 
 .nav-links {
   position: fixed;
-  z-index: 1;
-  bottom: 15vh;
-  left: 0;
-  right: 0%;
+  z-index: 3;
+  top: calc(100vh - 10%);
+  right: 5%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -238,32 +248,126 @@ ul {
   left: 0;
 }
 
-.end {
-  position: relative;
-  height: 200px;
-  width: 0%;
-}
-
 footer {
-    height: 100px;
-    width: 100%;
-    background-color: blue;
-    z-index: 3;
+  overflow-x: hidden;
+  top:0%;
+  left:0%;
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+  z-index: 1;
+  mix-blend-mode: multiply;
 }
 
-@media screen and (max-width: 800px) {
-  .nav-links {
-    position: fixed;
-    z-index: 1;
-    bottom: 18vh;
-    left: 0;
-    right: 0%;
+.institute-info p{
+  color:white;
+  background-color: blue;
+  margin:0%;
+}
+.footer-container h2{
+    display: block;
+    margin: 0%;
+}
+
+.institute-info{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    mix-blend-mode: multiply;
+    overflow-wrap: break-word;
+    max-width:350px;
+    row-gap: 10px;
+}
+
+.institute-info .footer-link a {
+  display: block;
+  color: blue;
+  background-color: white;
+}
+
+.institute-info .footer-link a:hover {
+  background-color: yellow;
+  color: blue;
+}
+
+.fab a{
+  background-color: blue;
+  color: white;
+  margin-right: 40px;
+}
+
+.fab a:hover{
+  background-color: blue;
+  color: yellow;
+}
+
+.logo-img{
+    display: block;
+    width: fit-content;
+    height: 60px;
+}
+
+@media screen and (min-width: 1200px){
+  .footer-container{
+    position: relative;
+    top: 10%;
+    left: 40px;
+    display: flex;
+    column-gap: 40px;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
-  html {
-    overflow-x: hidden;
+
+  .code-input{
+    position: relative;
+    top: 15%;
+    left: 40px;
+  }
+
+  .code-input input{
+    position: relative;
+    display: block;
+    width: 80vw;
+    max-width: 400px;
+    height: 150px;
+  }
+
+  .code-exmaple{
+    position: relative;
+    bottom: 40%;
+    left: 40%;
+  }  
+  
+  button{
+    display: block;
+    max-width: 100px;
+    background-color: white;
+    font-family: "Chivo Mono", monospace;
+    text-decoration: none;
+    color: blue;
+  }
+}
+
+@media screen and (max-width: 1200px){
+  .footer-container{
+    position: relative;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    column-gap: 40px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .code-input{
+    visibility: hidden;
+  }
+
+  .code-exmaple{
+    visibility: hidden;
+  }  
+  
+  button{
+    visibility: hidden;
   }
 }
