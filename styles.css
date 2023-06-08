@@ -350,3 +350,16 @@ footer {
     flex-direction: column;
   }
 }
+
+@media screen and (max-width: 380px) {
+  .nav-links {
+    bottom: 3vh;
+  }
+  .logo-container {
+    display: none;
+  }
+
+  footer .logo-container {
+    display: block;
+  }
+}
