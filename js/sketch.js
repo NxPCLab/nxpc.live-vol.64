@@ -55,15 +55,29 @@ function draw() {
   background(255);
   window.onresize = () => setScalar();
   looper = floor(millis() / interval) % variation1.length; //（ページが読み込まれてからのmillis秒）を、単位時間で割る。
+  fill(0, 0, 255);
+  push();
   render(variation1[looper]());
+  pop();
   state -= 0.01;
 }
 
 let variation1 = [
   () => {
+    rectMode(CENTER);
+    resolution = floor(10 * (sin(state) + 1) + 3);
+    const unitWidth = width / resolution;
+    for (let i = 1; i < resolution; i++) {
+      for (let j = 1; j < resolution; j++) {
+        if (i == j || i == resolution - j) {
+          rect(i * unitWidth, j * unitWidth, unitWidth);
+        }
+      }
+    }
+  },
+  () => {
     for (let i = 0; i <= steps; i += 0.1) {
       // fill(0, 255 - noise(state + i) * 250, noise(state + i) * 250);
-      fill(0, 0, 255);
       let t = i / steps;
       let x = bezierPoint(x1, x2, x3, x4, t);
       let y = bezierPoint(y1, y2, y3, y4, t);
@@ -138,17 +152,6 @@ let variation1 = [
       y = bezierPoint(y1, y2, y3, y4, t);
       length = sin(state + i / steps) * circleScale;
       rect(x - length, y, length);
-    }
-  },
-  () => {
-    resolution = floor(10 * (sin(state) + 1) + 3);
-    const unitWidth = (windowScale * 0.8) / resolution;
-    for (let i = 1; i < resolution; i++) {
-      for (let j = 1; j < resolution; j++) {
-        if (i == j || i == resolution - j) {
-          rect(i * unitWidth, j * unitWidth, unitWidth);
-        }
-      }
     }
   },
 ];
