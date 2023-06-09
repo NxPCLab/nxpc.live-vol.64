@@ -115,7 +115,7 @@ body {
   font-weight: 900;
   font-size: 1.5rem;
   color: white;
-  position: absolute;
+  position: fixed;
   text-align: right;
   right: 5vw;
   top: 40vh;
@@ -145,6 +145,7 @@ h2 {
   background-color: blue;
   color: white;
   font-size: 1.5rem;
+  font-weight: 100;
 }
 
 h3 {
@@ -320,6 +321,7 @@ footer {
   .topinfo {
     font-size: 1rem;
     top: 60vh;
+    position: absolute;
   }
 
   .keyvisual-performer {
