@@ -108,7 +108,7 @@ let variation1 = [
   },
   () => {
     for (let i = 0; i <= steps; i += 0.1) {
-      fill(0, 0, 255);
+      fill(0);
       // fill(noise(state + i) * 255, 255 - noise(state + i) * 255, 155);
       let t = i / steps;
       let x = bezierPoint(x1, x1, x4, x4, t);
@@ -123,7 +123,7 @@ let variation1 = [
   },
   () => {
     for (let i = 0; i <= steps; i += 0.1) {
-      fill(0, 0, 255);
+      fill(0);
       // fill(noise(state + i) * 150);
       let t = i / steps;
       let x = bezierPoint(x1, x2, x3, x4, t);
@@ -141,7 +141,7 @@ let variation1 = [
       //   255 - noise(state + i) * 255,
       //   noise(state + i) * 255
       // );
-      fill(0, 0, 255);
+      fill(0);
       let t = i / steps;
       let x = bezierPoint(x1, x2, x3, x4, t);
       let y = bezierPoint(y1, y2, y3, y4, t);
