@@ -128,7 +128,6 @@ h3,
 h4 {
   display: inline-block;
   font-family: "Chivo Mono", monospace;
-  font-weight: 900;
   margin-bottom: 1rem;
 }
 
@@ -136,6 +135,10 @@ h1 {
   background-color: blue;
   color: white;
   font-size: 2rem;
+  margin-left: -5vw;
+  padding-left: 4vw;
+  padding-right: 1vw;
+  font-weight: 900;
 }
 
 h2 {
@@ -245,7 +248,7 @@ a:hover {
   height: 40vh;
 }
 
-.nav-links {
+nav {
   position: fixed;
   z-index: 999;
   bottom: 10vh;
