@@ -25,6 +25,9 @@
 </head>
 
 <body>
+  <div class="loading">
+    <p>NxPC Vol.64 Proof of X x NxPC.Lab</p>
+  </div>
   <div class="script-container">
     <main>
       <!-- if 入力フォームの値 === (空文字: default) -->
@@ -33,7 +36,8 @@
       <iframe style="width: 100vw; height: 100vh; overflow: hidden; display: block"
         src="https://neort.io/embed/c9u7ii43p9fbkmo5p6vg?autoStart=true&quality=1&info=true" frameborder="0"
         sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-downloads"
-        allow="geolocation; microphone; camera; midi; vr" allowfullscreen="true" allowtransparency="true"></iframe>
+        allow="geolocation; microphone; camera; midi; vr" allowfullscreen="true" allowtransparency="true" loading="lazy"
+        onload="loadIframe(this)"></iframe>
 
       <!-- 余力があったら...NEORTの埋め込みで一元化 -->
     </main>
