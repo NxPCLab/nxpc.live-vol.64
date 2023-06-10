@@ -1,3 +1,11 @@
+// loading
+function loadIframe() {
+  const loading = document.querySelector('.loading');
+  setTimeout(function () {
+    loading.classList.add('hide');
+  }, 2000);
+};
+
 function getQueryParameter() {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
@@ -40,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     const request = new XMLHttpRequest();
     //https://neort.io/tag/bmjb2ss3p9f7m1g01690
-    request.open("GET", "https://api-neort.com/v1/tag/bmjb2ss3p9f7m1g01690/arts?limit=20&offset=0");
+    request.open("GET", "https://api-neort.com/v1/tag/bmjb2ss3p9f7m1g01690/arts?limit=40&offset=0");
     request.send();
     request.addEventListener("load", function () {
       data = JSON.parse(this.responseText);
