@@ -1,11 +1,36 @@
 html {
   overflow-x: hidden;
 }
+
 body {
   background-color: #eee;
   /*justify-content: center;*/
   margin: 0;
   font-size: 100%;
+}
+
+.loading {
+  position: fixed;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: PixelMplus12 Bold;
+  font-size: 1.5rem;
+}
+
+.loading.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 150ms;
+}
+
+.loading p {
+  animation: blink 150ms infinite;
 }
 
 .script-container {
@@ -166,6 +191,7 @@ p {
   background-color: yellow;
   color: blue;
 }
+
 .external-link:hover {
   background-color: blue;
   color: white;
@@ -211,6 +237,7 @@ p {
   right: 0;
   width: 90%;
 }
+
 .performer-detail img {
   display: inline-block;
   height: 300px;
@@ -363,6 +390,7 @@ footer {
   .nav-links {
     bottom: 3vh;
   }
+
   .logo-container {
     display: none;
   }

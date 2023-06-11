@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       property="og:description"
-      content="NxPC.Labは、クラブやライブにおけるアーティストと観客の相互作用によってもたらされる場の臨場感を拡大し、ネットへも拡散させるためのメディアテクノロジーの実現を目指した研究機関です。現代のメディア体験において必要とされる対話性、参加性をデバイス、インタフェース、ネットワークといったメディアテクノロジーを駆使することで、音楽体験を拡張し、音楽空間におけるコミュニケーションを次のステージへ導くための研究開発、イベントを実施しています。実験の場としてのイベントNxPC.Liveを中心に、レクチャーやワークショップ、ネットラジオなどの活動を行っています。"
+      content='ブロックチェーンをアートの新しいメディウムとして捉える展覧会"Proof
+    of X"のアフターパーティーがNxPC.Labとのコラボレーションで開催決定！ Proof of
+    XとNxPC.Labの相互作用による実験的音楽体験をお楽しみください。'
     />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:url" content="https://nxpclab.info/vol.64" />
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://nxpclab.github.io/nxpc.live-vol.64/img/ogp/ogp1.png"
+      content="https://nxpclab.github.io/nxpc.live-vol.64/img/ogp/ogp.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://nxpclab.github.io/nxpc.live-vol.64/img/ogp/ogp.png"
     />
 
     <script src="js/script.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="icon" href="img/favicon.ico" />
-
-    <!-- p5js -->
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,22 +35,23 @@
   </head>
 
   <body>
+    <div class="loading">
+      <p>Now loading...</p>
+      <p><a href="#">#poxnx</a></p>
+    </div>
     <div class="script-container">
       <main>
-        <!-- if 入力フォームの値 === (空文字: default) -->
-        <script src="js/sketch.js"></script>
-        <!-- else -->
-        <!-- <iframe
-            style="width: 100vw; height: 100vh; overflow: hidden; display: block"
-            src="https://neort.io/embed/(スケッチのID)?autoStart=true&quality=1&info=true"
-            frameborder="0"
-            sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-downloads"
-            allow="geolocation; microphone; camera; midi; vr"
-            allowfullscreen="true"
-            allowtransparency="true"
-          ></iframe> -->
-
-        <!-- 余力があったら...NEORTの埋め込みで一元化 -->
+        <iframe
+          style="width: 100vw; height: 100vh; overflow: hidden; display: block"
+          src="https://neort.io/embed/c9u7ii43p9fbkmo5p6vg?autoStart=true&quality=1&info=true"
+          frameborder="0"
+          sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-downloads"
+          allow="geolocation; microphone; camera; midi; vr"
+          allowfullscreen="true"
+          allowtransparency="true"
+          loading="lazy"
+          onload="loadIframe(this)"
+        ></iframe>
       </main>
     </div>
 
@@ -109,6 +114,12 @@
       <h1>Info</h1>
       <br />
       <p>After party for Proof of X (Proof of X x NxPC.Lab)クラブイベント</p>
+      <br />
+      <p>
+        ブロックチェーンをアートの新しいメディウムとして捉える展覧会"Proof of
+        X"のアフターパーティーがNxPC.Labとのコラボレーションで開催決定！ Proof
+        of XとNxPC.Labの相互作用による実験的音楽体験をお楽しみください。
+      </p>
       <br />
       <p>開催日時: 6/25 18:00~ 料金: ¥1500 + 1drink ¥500</p>
       <br />
@@ -181,13 +192,15 @@
           <h2>electric catfish</h2>
           <div class="performer-detail">
             <img src="img/artist-img/ec.gif" alt="" />
-            <p>BravenとSantaが電磁波を愛でます。</p>
+            <p>
+              SantaとBravenの電磁波ノイズユニットです。電子レンジを持ち込みます。
+            </p>
           </div>
         </div>
         <div class="performer-frame">
           <h2>hitsujikai</h2>
           <div class="performer-detail">
-            <img src="img/logo/logo.png" alt="" />
+            <img src="img/artist-img/hitsuji-02_1.png" alt="" />
             <p>地球を征服します。ひつじかい。</p>
           </div>
         </div>
@@ -249,9 +262,10 @@
         <p>マクト</p>
       </div>
       <div class="footer-credit">
-        <p><small>Web Design, Engineering, Creative Coding</small></p>
+        <p><small>Web Design, Engineering</small></p>
         <p>Taichi Matsumoto</p>
         <p>Kanata Yamagishi</p>
+        <p>Santa Naruse</p>
       </div>
     </footer>
   </body>
