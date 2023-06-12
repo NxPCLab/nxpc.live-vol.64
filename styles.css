@@ -320,7 +320,7 @@ footer {
 
 .logo-container img {
   display: inline-block;
-  height: 60px;
+  height: 50px;
 }
 
 @media screen and (max-width: 480px) {
