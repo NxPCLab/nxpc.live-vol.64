@@ -304,7 +304,7 @@ footer {
 .footer-credit {
   position: absolute;
   text-align: right;
-  top: 60vh;
+  bottom: 30vh;
   right: 5vw;
   display: flex;
   flex-direction: column;
